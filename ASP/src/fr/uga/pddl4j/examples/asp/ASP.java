@@ -1,25 +1,16 @@
 package fr.uga.pddl4j.examples.asp;
 
-import fr.uga.pddl4j.heuristics.state.StateHeuristic;
 import fr.uga.pddl4j.parser.DefaultParsedProblem;
-import fr.uga.pddl4j.parser.RequireKey;
 import fr.uga.pddl4j.plan.Plan;
 import fr.uga.pddl4j.plan.SequentialPlan;
 import fr.uga.pddl4j.planners.AbstractPlanner;
-import fr.uga.pddl4j.planners.Planner;
-import fr.uga.pddl4j.planners.PlannerConfiguration;
-import fr.uga.pddl4j.planners.ProblemNotSupportedException;
-import fr.uga.pddl4j.planners.SearchStrategy;
 import fr.uga.pddl4j.planners.statespace.HSP;
-import fr.uga.pddl4j.planners.statespace.search.StateSpaceSearch;
 import fr.uga.pddl4j.problem.DefaultProblem;
 import fr.uga.pddl4j.problem.Fluent;
 import fr.uga.pddl4j.problem.Goal;
 import fr.uga.pddl4j.problem.InitialState;
 import fr.uga.pddl4j.problem.Problem;
-import fr.uga.pddl4j.problem.State;
 import fr.uga.pddl4j.problem.operator.Action;
-import fr.uga.pddl4j.problem.operator.ConditionalEffect;
 import fr.uga.pddl4j.util.BitVector;
 
 import org.apache.logging.log4j.LogManager;
@@ -32,12 +23,8 @@ import org.sat4j.specs.ISolver;
 import picocli.CommandLine;
 
 import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Set;
-import java.util.concurrent.TimeoutException;
+
 
 /**
  * The class is an example. It shows how to create a simple A* search planner able to
@@ -226,12 +213,19 @@ public class ASP extends AbstractPlanner {
      */
     public static void main(String[] args) {
         try {
+            for (int i = 0; i < args.length; i++) {
+                System.out.println("Input file " + (i+1) + ": " + args[i]);
+            }
+        } catch (Exception e) {
+            LOGGER.fatal("invalid file arg(s)");
+        }
+        try {
             final ASP planner = new ASP();
             
 
             CommandLine cmd = new CommandLine(planner);
 
-            cmd.execute("resources/domain_blocks.pddl","resources/blocks_p001.pddl");
+            cmd.execute(args[0],args[1]);
 
         } catch (IllegalArgumentException e) {
             LOGGER.fatal(e.getMessage());
@@ -243,7 +237,7 @@ public class ASP extends AbstractPlanner {
 
             CommandLine cmd = new CommandLine(planner);
 
-            cmd.execute("resources/domain_blocks.pddl","resources/blocks_p001.pddl");
+            cmd.execute(args[0],args[1]);
 
         } catch (IllegalArgumentException e) {
             LOGGER.fatal(e.getMessage());
