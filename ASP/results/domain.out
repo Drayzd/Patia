@@ -1,0 +1,9 @@
+WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+Input file 1: resources/depots/domain.pddl
+Input file 2: resources/depots/domain.pddl
+Lexical error at line 1, column 9, file (resources/depots/domain.pddl) : unexpected token "domain".
+Was expecting:
+    "problem" ...
+Lexical error at line 1, column 9, file (resources/depots/domain.pddl) : unexpected token "domain".
+Was expecting:
+    "problem" ...

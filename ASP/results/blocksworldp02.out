@@ -1,0 +1,97 @@
+WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+Input file 1: resources//blocksworld/domain.pddl
+Input file 2: resources//blocksworld/p02.pddl
+
+parsing domain file "domain.pddl" done successfully
+parsing problem file "p02.pddl" done successfully
+# WARNING: Unable to get Instrumentation. Dynamic Attach failed. You may add this JAR as -javaagent manually, or supply -Djdk.attach.allowAttachSelf
+
+problem instantiation done successfully (40 actions, 29 fluents)
+
+sat
+
+found plan as follows:
+
+00: (  pick-up a) [0]
+01: (  pick-up c) [0]
+02: (  pick-up d) [0]
+03: (  pick-up b) [0]
+04: ( put-down a) [0]
+05: ( put-down c) [0]
+06: ( put-down d) [0]
+07: ( put-down b) [0]
+08: (  stack a a) [0]
+09: (  stack a c) [0]
+10: (  stack a d) [0]
+11: (  stack a b) [0]
+12: (  stack c a) [0]
+13: (  stack c c) [0]
+14: (  stack c d) [0]
+15: (  stack c b) [0]
+16: (  stack d a) [0]
+17: (  stack d c) [0]
+18: (  stack d d) [0]
+19: (  stack d b) [0]
+20: (  stack b a) [0]
+21: (  stack b c) [0]
+22: (  stack b d) [0]
+23: (  stack b b) [0]
+24: (unstack a a) [0]
+25: (unstack a c) [0]
+26: (unstack a d) [0]
+27: (unstack a b) [0]
+28: (unstack c a) [0]
+29: (unstack c c) [0]
+30: (unstack c d) [0]
+31: (unstack c b) [0]
+32: (unstack d a) [0]
+33: (unstack d c) [0]
+34: (unstack d d) [0]
+35: (unstack d b) [0]
+36: (unstack b a) [0]
+37: (unstack b c) [0]
+38: (unstack b d) [0]
+39: (unstack b b) [0]
+
+time spent:       0.05 seconds parsing 
+                  0.07 seconds encoding 
+                  0.00 seconds searching
+                  0.12 seconds total time
+
+memory used:      0.18 MBytes for problem representation
+                  0.00 MBytes for searching
+                  0.18 MBytes total
+
+
+
+parsing domain file "domain.pddl" done successfully
+parsing problem file "p02.pddl" done successfully
+
+problem instantiation done successfully (40 actions, 29 fluents)
+
+* Starting ASTAR search with FAST_FORWARD heuristic 
+* ASTAR search succeeded
+
+found plan as follows:
+
+00: (unstack b c) [0]
+01: ( put-down b) [0]
+02: (unstack c a) [0]
+03: ( put-down c) [0]
+04: (unstack a d) [0]
+05: (  stack a b) [0]
+06: (  pick-up c) [0]
+07: (  stack c a) [0]
+08: (  pick-up d) [0]
+09: (  stack d c) [0]
+
+time spent:       0.02 seconds parsing 
+                  0.02 seconds encoding 
+                  0.01 seconds searching
+                  0.05 seconds total time
+
+memory used:      0.18 MBytes for problem representation
+                  0.00 MBytes for searching
+                  0.19 MBytes total
+
+

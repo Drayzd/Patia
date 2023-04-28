@@ -3,6 +3,7 @@ echo haha
 # Set the path to your Java program
 JAVA_PROGRAM="src/fr/uga/pddl4j/examples/asp/ASP.java"
 
+
 # Set the path to the directory containing the problem files
 PROBLEM_DIR="resources/"
 
@@ -10,7 +11,9 @@ PROBLEM_DIR="resources/"
 OUTPUT_DIR="results/"
 
 # Compile your Java program
-javac "$JAVA_PROGRAM"
+javac -cp "lib/*" "$JAVA_PROGRAM"
+echo compiling done
+
 
 # Loop through each domain folder
 for DOMAIN_FOLDER in "$PROBLEM_DIR"/*/; do
@@ -21,13 +24,15 @@ for DOMAIN_FOLDER in "$PROBLEM_DIR"/*/; do
     # Loop through each problem file
     for PROBLEM_FILE in "$DOMAIN_FOLDER"*.pddl; do
         # Get the problem name without the directory path or extension
-        FILENAME="$(basename "$PROBLEM_FILE")"
-        FILENAME="${FILENAME%.*}"
+        if [ "$FILENAME" != "domain" ]; then
+          FILENAME="$(basename "$PROBLEM_FILE")"
+          FILENAME="${FILENAME%.*}"
 
-        # Construct the output filename
-        OUTPUT_FILE="$OUTPUT_DIR/$DOMAIN_NAME$FILENAME.out"
+          # Construct the output filename
+          OUTPUT_FILE="$OUTPUT_DIR/$DOMAIN_NAME$FILENAME.out"
 
-        # Run your Java program with the domain file and problem file as arguments
-        java ASP.java "$PROBLEM_DIR/$DOMAIN_NAME/domain.pddl" "$PROBLEM_FILE" > "$OUTPUT_FILE"
+          # Run your Java program with the domain file and problem file as arguments
+          java -cp "bin:lib/*" src/fr/uga/pddl4j/examples/asp/ASP.java "$PROBLEM_DIR/$DOMAIN_NAME/domain.pddl" "$PROBLEM_FILE" > "$OUTPUT_FILE"
+        fi
     done
 done

@@ -1,0 +1,3 @@
+WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+Input file 1: resources/depots//domain.pddl
+Input file 2: resources/depots//p01.pddl

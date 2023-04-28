@@ -1,0 +1,209 @@
+WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+Input file 1: resources/blocksworld/domain.pddl
+Input file 2: resources/blocksworld/p13.pddl
+
+parsing domain file "domain.pddl" done successfully
+parsing problem file "p13.pddl" done successfully
+# WARNING: Unable to get Instrumentation. Dynamic Attach failed. You may add this JAR as -javaagent manually, or supply -Djdk.attach.allowAttachSelf
+
+problem instantiation done successfully (144 actions, 89 fluents)
+
+sat
+
+found plan as follows:
+
+000: (  pick-up h) [0]
+001: (  pick-up g) [0]
+002: (  pick-up f) [0]
+003: (  pick-up e) [0]
+004: (  pick-up c) [0]
+005: (  pick-up b) [0]
+006: (  pick-up d) [0]
+007: (  pick-up a) [0]
+008: ( put-down h) [0]
+009: ( put-down g) [0]
+010: ( put-down f) [0]
+011: ( put-down e) [0]
+012: ( put-down c) [0]
+013: ( put-down b) [0]
+014: ( put-down d) [0]
+015: ( put-down a) [0]
+016: (  stack h h) [0]
+017: (  stack h g) [0]
+018: (  stack h f) [0]
+019: (  stack h e) [0]
+020: (  stack h c) [0]
+021: (  stack h b) [0]
+022: (  stack h d) [0]
+023: (  stack h a) [0]
+024: (  stack g h) [0]
+025: (  stack g g) [0]
+026: (  stack g f) [0]
+027: (  stack g e) [0]
+028: (  stack g c) [0]
+029: (  stack g b) [0]
+030: (  stack g d) [0]
+031: (  stack g a) [0]
+032: (  stack f h) [0]
+033: (  stack f g) [0]
+034: (  stack f f) [0]
+035: (  stack f e) [0]
+036: (  stack f c) [0]
+037: (  stack f b) [0]
+038: (  stack f d) [0]
+039: (  stack f a) [0]
+040: (  stack e h) [0]
+041: (  stack e g) [0]
+042: (  stack e f) [0]
+043: (  stack e e) [0]
+044: (  stack e c) [0]
+045: (  stack e b) [0]
+046: (  stack e d) [0]
+047: (  stack e a) [0]
+048: (  stack c h) [0]
+049: (  stack c g) [0]
+050: (  stack c f) [0]
+051: (  stack c e) [0]
+052: (  stack c c) [0]
+053: (  stack c b) [0]
+054: (  stack c d) [0]
+055: (  stack c a) [0]
+056: (  stack b h) [0]
+057: (  stack b g) [0]
+058: (  stack b f) [0]
+059: (  stack b e) [0]
+060: (  stack b c) [0]
+061: (  stack b b) [0]
+062: (  stack b d) [0]
+063: (  stack b a) [0]
+064: (  stack d h) [0]
+065: (  stack d g) [0]
+066: (  stack d f) [0]
+067: (  stack d e) [0]
+068: (  stack d c) [0]
+069: (  stack d b) [0]
+070: (  stack d d) [0]
+071: (  stack d a) [0]
+072: (  stack a h) [0]
+073: (  stack a g) [0]
+074: (  stack a f) [0]
+075: (  stack a e) [0]
+076: (  stack a c) [0]
+077: (  stack a b) [0]
+078: (  stack a d) [0]
+079: (  stack a a) [0]
+080: (unstack h h) [0]
+081: (unstack h g) [0]
+082: (unstack h f) [0]
+083: (unstack h e) [0]
+084: (unstack h c) [0]
+085: (unstack h b) [0]
+086: (unstack h d) [0]
+087: (unstack h a) [0]
+088: (unstack g h) [0]
+089: (unstack g g) [0]
+090: (unstack g f) [0]
+091: (unstack g e) [0]
+092: (unstack g c) [0]
+093: (unstack g b) [0]
+094: (unstack g d) [0]
+095: (unstack g a) [0]
+096: (unstack f h) [0]
+097: (unstack f g) [0]
+098: (unstack f f) [0]
+099: (unstack f e) [0]
+100: (unstack f c) [0]
+101: (unstack f b) [0]
+102: (unstack f d) [0]
+103: (unstack f a) [0]
+104: (unstack e h) [0]
+105: (unstack e g) [0]
+106: (unstack e f) [0]
+107: (unstack e e) [0]
+108: (unstack e c) [0]
+109: (unstack e b) [0]
+110: (unstack e d) [0]
+111: (unstack e a) [0]
+112: (unstack c h) [0]
+113: (unstack c g) [0]
+114: (unstack c f) [0]
+115: (unstack c e) [0]
+116: (unstack c c) [0]
+117: (unstack c b) [0]
+118: (unstack c d) [0]
+119: (unstack c a) [0]
+120: (unstack b h) [0]
+121: (unstack b g) [0]
+122: (unstack b f) [0]
+123: (unstack b e) [0]
+124: (unstack b c) [0]
+125: (unstack b b) [0]
+126: (unstack b d) [0]
+127: (unstack b a) [0]
+128: (unstack d h) [0]
+129: (unstack d g) [0]
+130: (unstack d f) [0]
+131: (unstack d e) [0]
+132: (unstack d c) [0]
+133: (unstack d b) [0]
+134: (unstack d d) [0]
+135: (unstack d a) [0]
+136: (unstack a h) [0]
+137: (unstack a g) [0]
+138: (unstack a f) [0]
+139: (unstack a e) [0]
+140: (unstack a c) [0]
+141: (unstack a b) [0]
+142: (unstack a d) [0]
+143: (unstack a a) [0]
+
+time spent:       0.11 seconds parsing 
+                  0.22 seconds encoding 
+                  0.00 seconds searching
+                  0.32 seconds total time
+
+memory used:      0.57 MBytes for problem representation
+                  0.00 MBytes for searching
+                  0.57 MBytes total
+
+
+
+parsing domain file "domain.pddl" done successfully
+parsing problem file "p13.pddl" done successfully
+
+problem instantiation done successfully (144 actions, 89 fluents)
+
+* Starting ASTAR search with FAST_FORWARD heuristic 
+* ASTAR search succeeded
+
+found plan as follows:
+
+00: (unstack a g) [0]
+01: ( put-down a) [0]
+02: (unstack g e) [0]
+03: (  stack g b) [0]
+04: (  pick-up a) [0]
+05: (  stack a g) [0]
+06: (  pick-up c) [0]
+07: (  stack c a) [0]
+08: (unstack d h) [0]
+09: ( put-down d) [0]
+10: (unstack h f) [0]
+11: (  stack h c) [0]
+12: (  pick-up e) [0]
+13: (  stack e h) [0]
+14: (  pick-up f) [0]
+15: (  stack f e) [0]
+16: (  pick-up d) [0]
+17: (  stack d f) [0]
+
+time spent:       0.02 seconds parsing 
+                  0.03 seconds encoding 
+                  0.25 seconds searching
+                  0.30 seconds total time
+
+memory used:      0.57 MBytes for problem representation
+                  0.24 MBytes for searching
+                  0.81 MBytes total
+
+

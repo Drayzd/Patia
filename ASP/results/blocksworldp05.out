@@ -1,0 +1,117 @@
+WARNING: sun.reflect.Reflection.getCallerClass is not supported. This will impact performance.
+Input file 1: resources//blocksworld/domain.pddl
+Input file 2: resources//blocksworld/p05.pddl
+
+parsing domain file "domain.pddl" done successfully
+parsing problem file "p05.pddl" done successfully
+# WARNING: Unable to get Instrumentation. Dynamic Attach failed. You may add this JAR as -javaagent manually, or supply -Djdk.attach.allowAttachSelf
+
+problem instantiation done successfully (60 actions, 41 fluents)
+
+sat
+
+found plan as follows:
+
+00: (  pick-up a) [0]
+01: (  pick-up d) [0]
+02: (  pick-up c) [0]
+03: (  pick-up e) [0]
+04: (  pick-up b) [0]
+05: ( put-down a) [0]
+06: ( put-down d) [0]
+07: ( put-down c) [0]
+08: ( put-down e) [0]
+09: ( put-down b) [0]
+10: (  stack a a) [0]
+11: (  stack a d) [0]
+12: (  stack a c) [0]
+13: (  stack a e) [0]
+14: (  stack a b) [0]
+15: (  stack d a) [0]
+16: (  stack d d) [0]
+17: (  stack d c) [0]
+18: (  stack d e) [0]
+19: (  stack d b) [0]
+20: (  stack c a) [0]
+21: (  stack c d) [0]
+22: (  stack c c) [0]
+23: (  stack c e) [0]
+24: (  stack c b) [0]
+25: (  stack e a) [0]
+26: (  stack e d) [0]
+27: (  stack e c) [0]
+28: (  stack e e) [0]
+29: (  stack e b) [0]
+30: (  stack b a) [0]
+31: (  stack b d) [0]
+32: (  stack b c) [0]
+33: (  stack b e) [0]
+34: (  stack b b) [0]
+35: (unstack a a) [0]
+36: (unstack a d) [0]
+37: (unstack a c) [0]
+38: (unstack a e) [0]
+39: (unstack a b) [0]
+40: (unstack d a) [0]
+41: (unstack d d) [0]
+42: (unstack d c) [0]
+43: (unstack d e) [0]
+44: (unstack d b) [0]
+45: (unstack c a) [0]
+46: (unstack c d) [0]
+47: (unstack c c) [0]
+48: (unstack c e) [0]
+49: (unstack c b) [0]
+50: (unstack e a) [0]
+51: (unstack e d) [0]
+52: (unstack e c) [0]
+53: (unstack e e) [0]
+54: (unstack e b) [0]
+55: (unstack b a) [0]
+56: (unstack b d) [0]
+57: (unstack b c) [0]
+58: (unstack b e) [0]
+59: (unstack b b) [0]
+
+time spent:       0.05 seconds parsing 
+                  0.10 seconds encoding 
+                  0.00 seconds searching
+                  0.15 seconds total time
+
+memory used:      0.26 MBytes for problem representation
+                  0.00 MBytes for searching
+                  0.26 MBytes total
+
+
+
+parsing domain file "domain.pddl" done successfully
+parsing problem file "p05.pddl" done successfully
+
+problem instantiation done successfully (60 actions, 41 fluents)
+
+* Starting ASTAR search with FAST_FORWARD heuristic 
+* ASTAR search succeeded
+
+found plan as follows:
+
+00: (unstack b a) [0]
+01: (  stack b c) [0]
+02: (unstack a d) [0]
+03: (  stack a e) [0]
+04: (unstack b c) [0]
+05: (  stack b a) [0]
+06: (  pick-up c) [0]
+07: (  stack c b) [0]
+08: (  pick-up d) [0]
+09: (  stack d c) [0]
+
+time spent:       0.02 seconds parsing 
+                  0.01 seconds encoding 
+                  0.01 seconds searching
+                  0.05 seconds total time
+
+memory used:      0.26 MBytes for problem representation
+                  0.01 MBytes for searching
+                  0.27 MBytes total
+
+
